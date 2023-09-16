@@ -2,23 +2,15 @@
 // Project: https://github.com/devfolioco/react-otp-input
 // Definitions by: Anup Bhatkhande <https://github.com/anupbui>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
-import * as React from 'react';
+import * as React from "react";
 
 export interface OTPInputProps {
-    value: number | string;
-    onChange: any;
-    numInputs: number;
-    separator?: JSX.Element | undefined;
-    isDisabled?: boolean | undefined;
-    shouldAutoFocus?: boolean | undefined;
-    hasErrored?: boolean | undefined;
-    inputType?: string | undefined;
-    isInputNum?: boolean | undefined;
-    containerStyle?: string | React.CSSProperties | undefined;
-    inputStyle?: string | React.CSSProperties | undefined;
-    focusStyle?: string | React.CSSProperties | undefined;
-    disabledStyle?: string | React.CSSProperties | undefined;
-    errorStyle?: string | React.CSSProperties | undefined;
+  value: number | string;
+  onChange: (otp: number | string) => void;
+  numInputs?: number;
+  inputType?: string;
+  renderSeparator?: React.ReactNode;
+  renderInput?: (props: any) => React.ReactNode;
 }
 
-export default class extends React.Component<OTPInputProps> { }
+export default class extends React.Component<OTPInputProps> {}
